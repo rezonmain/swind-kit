@@ -1,3 +1,3 @@
-export default () => {
-  console.log("My component library");
-};
+import "../styles/main.css";
+
+export * from "./components";

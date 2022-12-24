@@ -4,6 +4,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
+import postcss from "rollup-plugin-postcss";
 import p from "./package.json" assert { type: "json" };
 
 export default [
@@ -24,6 +25,7 @@ export default [
     plugins: [
       json(),
       resolve(),
+      postcss({ config: { path: "./postcss.config.js" } }),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
     ],

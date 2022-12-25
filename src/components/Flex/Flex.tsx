@@ -1,56 +1,45 @@
 import React, { ComponentPropsWithoutRef, ReactNode } from "react";
+import { OneOf } from "../../utils/oneOf";
 
 interface FlexProps extends ComponentPropsWithoutRef<"div"> {
   children: ReactNode;
   tw?: string;
 }
+interface IsCol {
+  col?: true;
+}
+interface IsRow {
+  row?: true;
+}
+interface IsItemsCenter {
+  itemsCenter?: true;
+}
+interface IsItemsEnd {
+  itemsEnd?: true;
+}
+interface IsItemsStart {
+  itemsStart?: true;
+}
+interface IsJustifyCenter {
+  justifyCenter?: true;
+}
+interface IsJustifyStart {
+  justifyStart?: true;
+}
+interface IsJustifyEnd {
+  justifyEnd?: true;
+}
+interface IsJustifyBetween {
+  justifyBetween?: true;
+}
 
-type ConditionalsDir =
-  | {
-      col?: true;
-      row?: never;
-    }
-  | { col?: never; row?: true };
+type ConditionalDir = OneOf<[IsCol, IsRow]>;
+type ConditionalItems = OneOf<[IsItemsCenter, IsItemsEnd, IsItemsStart]>;
+type ConditionalJustify = OneOf<
+  [IsJustifyCenter, IsJustifyStart, IsJustifyEnd, IsJustifyBetween]
+>;
 
-type ConditionalsItems =
-  | {
-      itemsCenter?: true;
-      itemsEnd?: never;
-      itemsStart?: never;
-    }
-  | { itemsCenter?: never; itemsEnd?: true; itemsStart?: never }
-  | { itemsCenter?: never; itemsEnd?: never; itemsStart?: true };
-
-type Conditionaljustify =
-  | {
-      justifyCenter?: true;
-      justifyEnd?: never;
-      justifyStart?: never;
-      justifyBetween?: never;
-    }
-  | {
-      justifyCenter?: never;
-      justifyEnd?: true;
-      justifyStart?: never;
-      justifyBetween?: never;
-    }
-  | {
-      justifyCenter?: never;
-      justifyEnd?: never;
-      justifyStart?: true;
-      justifyBetween?: never;
-    }
-  | {
-      justifyCenter?: never;
-      justifyEnd?: never;
-      justifyStart?: never;
-      justifyBetween?: true;
-    };
-
-export type Props = FlexProps &
-  ConditionalsDir &
-  ConditionalsItems &
-  Conditionaljustify;
+type Props = FlexProps & ConditionalDir & ConditionalItems & ConditionalJustify;
 
 const Flex = ({
   col,

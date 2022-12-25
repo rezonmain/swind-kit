@@ -1,6 +1,6 @@
 {
-  "name": "swind-kit",
-  "version": "0.0.1",
+  "name": "@rezonmain/swind-kit",
+  "version": "0.0.2",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -14,6 +14,9 @@
   "keywords": [],
   "author": "rez",
   "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/rezonmain"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.0",
     "@rollup/plugin-json": "^6.0.0",

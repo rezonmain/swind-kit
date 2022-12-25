@@ -1,5 +1,7 @@
 import React from "react";
 
-export default () => {
+const Input = () => {
   return <input className=' bg-black' />;
 };
+
+export default Input;

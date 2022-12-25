@@ -1,5 +1,4 @@
 import React, { ComponentPropsWithoutRef } from "react";
-import Flex from "../Flex";
 
 interface InputProps extends ComponentPropsWithoutRef<"input"> {
   label?: string;

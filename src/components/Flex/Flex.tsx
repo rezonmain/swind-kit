@@ -5,38 +5,19 @@ interface FlexProps extends ComponentPropsWithoutRef<"div"> {
   children: ReactNode;
   tw?: string;
 }
-interface IsCol {
-  col?: true;
-}
-interface IsRow {
-  row?: true;
-}
-interface IsItemsCenter {
-  itemsCenter?: true;
-}
-interface IsItemsEnd {
-  itemsEnd?: true;
-}
-interface IsItemsStart {
-  itemsStart?: true;
-}
-interface IsJustifyCenter {
-  justifyCenter?: true;
-}
-interface IsJustifyStart {
-  justifyStart?: true;
-}
-interface IsJustifyEnd {
-  justifyEnd?: true;
-}
-interface IsJustifyBetween {
-  justifyBetween?: true;
-}
 
-type ConditionalDir = OneOf<[IsCol, IsRow]>;
-type ConditionalItems = OneOf<[IsItemsCenter, IsItemsEnd, IsItemsStart]>;
+type ConditionalDir = OneOf<[{ col?: true }, { row?: true }]>;
+
+type ConditionalItems = OneOf<
+  [{ itemsCenter?: true }, { itemsEnd?: true }, { itemsStart?: true }]
+>;
 type ConditionalJustify = OneOf<
-  [IsJustifyCenter, IsJustifyStart, IsJustifyEnd, IsJustifyBetween]
+  [
+    { justifyCenter?: true },
+    { justifyStart?: true },
+    { justifyEnd?: true },
+    { justifyBetween?: true }
+  ]
 >;
 
 type Props = FlexProps & ConditionalDir & ConditionalItems & ConditionalJustify;

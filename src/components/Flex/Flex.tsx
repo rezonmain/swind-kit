@@ -41,6 +41,9 @@ type ConditionalJustify = OneOf<
 
 type Props = FlexProps & ConditionalDir & ConditionalItems & ConditionalJustify;
 
+/**
+ * Generic Flex container, can be used with Item component or any other blocked element
+ */
 const Flex = ({
   col,
   justifyEnd,

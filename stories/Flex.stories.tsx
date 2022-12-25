@@ -1,7 +1,6 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Flex } from "../src/components";
-import { string } from "yargs";
+import { Flex, Item } from "../src/components";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -66,24 +65,18 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Flex> = (args) => <Flex {...args} />;
 
-const Item = ({ children }: { children: ReactNode }) => (
-  <div
-    style={{ backgroundColor: "#a78bfa", width: "1rem", textAlign: "center" }}
-  >
-    {children}
-  </div>
-);
-
 export const Row = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Row.args = {
   row: true,
   children: (
     <>
-      <Item>1</Item>
-      <Item>2</Item>
-      <Item>3</Item>
-      <Item>4</Item>
+      <Item className='bg-violet-400 w-4 text-center'>1</Item>
+      <Item grow className='bg-violet-300 w-4 text-center'>
+        2
+      </Item>
+      <Item className='bg-violet-400 w-4 text-center'>3</Item>
+      <Item className='bg-violet-400 w-4 text-center'>4</Item>
     </>
   ),
   tw: "gap-8 border-2",
@@ -94,10 +87,10 @@ Col.args = {
   col: true,
   children: (
     <>
-      <Item>1</Item>
-      <Item>2</Item>
-      <Item>3</Item>
-      <Item>4</Item>
+      <Item className='bg-violet-400 w-4 text-center'>1</Item>
+      <Item className='bg-violet-400 w-4 text-center'>2</Item>
+      <Item className='bg-violet-400 w-4 text-center'>3</Item>
+      <Item className='bg-violet-400 w-4 text-center'>4</Item>
     </>
   ),
   tw: "gap-4 border-2",
@@ -108,10 +101,10 @@ JustifyEnd.args = {
   justifyEnd: true,
   children: (
     <>
-      <Item>1</Item>
-      <Item>2</Item>
-      <Item>3</Item>
-      <Item>4</Item>
+      <Item className='bg-violet-400 w-4 text-center'>1</Item>
+      <Item className='bg-violet-400 w-4 text-center'>2</Item>
+      <Item className='bg-violet-400 w-4 text-center'>3</Item>
+      <Item className='bg-violet-400 w-4 text-center'>4</Item>
     </>
   ),
   tw: "gap-6 border-2",
@@ -122,10 +115,10 @@ JustifyBetween.args = {
   justifyBetween: true,
   children: (
     <>
-      <Item>1</Item>
-      <Item>2</Item>
-      <Item>3</Item>
-      <Item>4</Item>
+      <Item className='bg-violet-400 w-4 text-center'>1</Item>
+      <Item className='bg-violet-400 w-4 text-center'>2</Item>
+      <Item className='bg-violet-400 w-4 text-center'>3</Item>
+      <Item className='bg-violet-300 w-4 text-center'>4</Item>
     </>
   ),
   tw: "border-2",
@@ -137,10 +130,10 @@ ItemsStart.args = {
   col: true,
   children: (
     <>
-      <Item>1</Item>
-      <Item>2</Item>
-      <Item>3</Item>
-      <Item>4</Item>
+      <Item className='bg-violet-400 w-4 text-center'>1</Item>
+      <Item className='bg-violet-400 w-4 text-center'>2</Item>
+      <Item className='bg-violet-400 w-4 text-center'>3</Item>
+      <Item className='bg-violet-400 w-4 text-center'>4</Item>
     </>
   ),
   tw: "gap-2 border-2",
@@ -152,10 +145,10 @@ ItemsEnd.args = {
   col: true,
   children: (
     <>
-      <Item>1</Item>
-      <Item>2</Item>
-      <Item>3</Item>
-      <Item>4</Item>
+      <Item className='bg-violet-300 w-4 text-center'>1</Item>
+      <Item className='bg-violet-400 w-4 text-center'>2</Item>
+      <Item className='bg-violet-400 w-4 text-center'>3</Item>
+      <Item className='bg-violet-400 w-4 text-center'>4</Item>
     </>
   ),
   tw: "gap-2 border-2",

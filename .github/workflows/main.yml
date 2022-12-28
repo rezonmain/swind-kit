@@ -25,6 +25,6 @@ jobs:
       - name: Build
         run: |
           npm install
-          grunt
+          npm run build
       - run: npm publish
         if: github.event_name == 'push'

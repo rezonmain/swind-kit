@@ -143,7 +143,7 @@ AsLabel.args = {
   children: (
     <>
       Click me to focus input
-      <input id='inputElement'></input>
+      <input id="inputElement"></input>
     </>
   ),
 };

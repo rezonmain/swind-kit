@@ -7,6 +7,7 @@ import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import p from "./package.json" assert { type: "json" };
+import eslint from "@rollup/plugin-eslint";
 
 export default [
   {
@@ -27,6 +28,7 @@ export default [
       peerDepsExternal(),
       resolve(),
       commonjs(),
+      eslint({ throwOnError: true }),
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss({ config: { path: "./postcss.config.js" } }),
       terser({ sourceMap: true }),

@@ -3,7 +3,7 @@ import React from "react";
 // Source: https://github.com/emotion-js/emotion/blob/master/packages/styled-base/types/helper.d.ts
 // A more precise version of just React.ComponentPropsWithoutRef on its own
 export type PropsOf<
-  C extends keyof JSX.IntrinsicElements | React.JSXElementConstructor<any>
+  C extends keyof JSX.IntrinsicElements | React.JSXElementConstructor<unknown>
 > = JSX.LibraryManagedAttributes<C, React.ComponentPropsWithoutRef<C>>;
 
 type AsProp<C extends React.ElementType> = {
@@ -19,7 +19,8 @@ type AsProp<C extends React.ElementType> = {
  * (`OverrideProps`), ensuring that any duplicates are overridden by the overriding
  * set of props.
  */
-export type ExtendableProps<ExtendedProps = {}, OverrideProps = {}> =
+// eslint-disable-next-line prettier/prettier
+export type ExtendableProps<ExtendedProps = object, OverrideProps = object> =
   OverrideProps & Omit<ExtendedProps, keyof OverrideProps>;
 
 /**
@@ -27,12 +28,16 @@ export type ExtendableProps<ExtendedProps = {}, OverrideProps = {}> =
  * props like children, className & style work, as well as element-specific
  * attributes like aria roles. The component (`C`) must be passed in.
  */
-export type InheritableElementProps<C extends React.ElementType, Props = {}> =
-  ExtendableProps<PropsOf<C>, Props>;
+export type InheritableElementProps<
+  C extends React.ElementType,
+  Props = object
+> = ExtendableProps<PropsOf<C>, Props>;
 
 /**
  * A more sophisticated version of `InheritableElementProps` where
  * the passed in `as` prop will determine which props can be included
  */
-export type PolymorphicComponentProps<C extends React.ElementType, Props = {}> =
-  InheritableElementProps<C, Props & AsProp<C>>;
+export type PolymorphicComponentProps<
+  C extends React.ElementType,
+  Props = object
+> = InheritableElementProps<C, Props & AsProp<C>>;

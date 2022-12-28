@@ -71,12 +71,12 @@ Row.args = {
   row: true,
   children: (
     <>
-      <Item className='bg-violet-400 w-4 text-center'>1</Item>
-      <Item grow className='bg-violet-300 w-4 text-center'>
+      <Item className="bg-violet-400 w-4 text-center">1</Item>
+      <Item grow className="bg-violet-300 w-4 text-center">
         2
       </Item>
-      <Item className='bg-violet-400 w-4 text-center'>3</Item>
-      <Item className='bg-violet-400 w-4 text-center'>4</Item>
+      <Item className="bg-violet-400 w-4 text-center">3</Item>
+      <Item className="bg-violet-400 w-4 text-center">4</Item>
     </>
   ),
   tw: "gap-8 border-2",
@@ -87,10 +87,10 @@ Col.args = {
   col: true,
   children: (
     <>
-      <Item className='bg-violet-400 w-4 text-center'>1</Item>
-      <Item className='bg-violet-400 w-4 text-center'>2</Item>
-      <Item className='bg-violet-400 w-4 text-center'>3</Item>
-      <Item className='bg-violet-400 w-4 text-center'>4</Item>
+      <Item className="bg-violet-400 w-4 text-center">1</Item>
+      <Item className="bg-violet-400 w-4 text-center">2</Item>
+      <Item className="bg-violet-400 w-4 text-center">3</Item>
+      <Item className="bg-violet-400 w-4 text-center">4</Item>
     </>
   ),
   tw: "gap-4 border-2",
@@ -101,10 +101,10 @@ JustifyEnd.args = {
   justifyEnd: true,
   children: (
     <>
-      <Item className='bg-violet-400 w-4 text-center'>1</Item>
-      <Item className='bg-violet-400 w-4 text-center'>2</Item>
-      <Item className='bg-violet-400 w-4 text-center'>3</Item>
-      <Item className='bg-violet-400 w-4 text-center'>4</Item>
+      <Item className="bg-violet-400 w-4 text-center">1</Item>
+      <Item className="bg-violet-400 w-4 text-center">2</Item>
+      <Item className="bg-violet-400 w-4 text-center">3</Item>
+      <Item className="bg-violet-400 w-4 text-center">4</Item>
     </>
   ),
   tw: "gap-6 border-2",
@@ -115,10 +115,10 @@ JustifyBetween.args = {
   justifyBetween: true,
   children: (
     <>
-      <Item className='bg-violet-400 w-4 text-center'>1</Item>
-      <Item className='bg-violet-400 w-4 text-center'>2</Item>
-      <Item className='bg-violet-400 w-4 text-center'>3</Item>
-      <Item className='bg-violet-300 w-4 text-center'>4</Item>
+      <Item className="bg-violet-400 w-4 text-center">1</Item>
+      <Item className="bg-violet-400 w-4 text-center">2</Item>
+      <Item className="bg-violet-400 w-4 text-center">3</Item>
+      <Item className="bg-violet-300 w-4 text-center">4</Item>
     </>
   ),
   tw: "border-2",
@@ -130,10 +130,10 @@ ItemsStart.args = {
   col: true,
   children: (
     <>
-      <Item className='bg-violet-400 w-4 text-center'>1</Item>
-      <Item className='bg-violet-400 w-4 text-center'>2</Item>
-      <Item className='bg-violet-400 w-4 text-center'>3</Item>
-      <Item className='bg-violet-400 w-4 text-center'>4</Item>
+      <Item className="bg-violet-400 w-4 text-center">1</Item>
+      <Item className="bg-violet-400 w-4 text-center">2</Item>
+      <Item className="bg-violet-400 w-4 text-center">3</Item>
+      <Item className="bg-violet-400 w-4 text-center">4</Item>
     </>
   ),
   tw: "gap-2 border-2",
@@ -145,10 +145,10 @@ ItemsEnd.args = {
   col: true,
   children: (
     <>
-      <Item className='bg-violet-300 w-4 text-center'>1</Item>
-      <Item className='bg-violet-400 w-4 text-center'>2</Item>
-      <Item className='bg-violet-400 w-4 text-center'>3</Item>
-      <Item className='bg-violet-400 w-4 text-center'>4</Item>
+      <Item className="bg-violet-300 w-4 text-center">1</Item>
+      <Item className="bg-violet-400 w-4 text-center">2</Item>
+      <Item className="bg-violet-400 w-4 text-center">3</Item>
+      <Item className="bg-violet-400 w-4 text-center">4</Item>
     </>
   ),
   tw: "gap-2 border-2",

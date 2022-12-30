@@ -26,7 +26,9 @@ jobs:
         run: |
           npm install
           npm run build
-      - run: npm publish
+
+      - name: Publish
+        run: npm publish
         if: github.event_name == 'push'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

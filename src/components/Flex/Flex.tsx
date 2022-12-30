@@ -48,7 +48,7 @@ const Flex = ({
           : "justify-center"
       } ${
         itemsEnd ? "items-end" : itemsStart ? "items-start" : "items-center"
-      } ${tw ?? ""} ${props.className ?? ""}`}
+      } ${tw ?? ""} ${props.className ?? ""}`.trim()}
     >
       {props.children}
     </div>

@@ -3,3 +3,4 @@ dist
 *.css
 storybook-static
 stories
+src/**/*.test.tsx

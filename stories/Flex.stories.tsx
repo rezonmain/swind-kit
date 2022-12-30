@@ -153,3 +153,22 @@ ItemsEnd.args = {
   ),
   tw: "gap-2 border-2",
 };
+
+export const Nested = Template.bind({});
+Nested.args = {
+  itemsEnd: true,
+  col: true,
+  children: (
+    <>
+      <Item className="bg-violet-300 w-4 text-center">1</Item>
+      <Item className="bg-violet-400 w-4 text-center">2</Item>
+      <Flex justifyBetween row tw="gap-6" className="border-4">
+        <Item className="bg-violet-400 w-4 text-center">1a</Item>
+        <Item className="bg-violet-400 w-4 text-center">2a</Item>
+      </Flex>
+      <Item className="bg-violet-400 w-4 text-center">3</Item>
+      <Item className="bg-violet-400 w-4 text-center">4</Item>
+    </>
+  ),
+  tw: "gap-2 border-2",
+};

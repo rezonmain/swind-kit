@@ -1,6 +1,6 @@
 {
   "name": "@rezonmain/swind-kit",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -39,6 +39,7 @@
     "@storybook/manager-webpack5": "^6.5.15",
     "@storybook/react": "^6.5.15",
     "@storybook/testing-library": "^0.0.13",
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.2.4",
     "@types/react": "^18.0.26",
@@ -72,7 +73,9 @@
   },
   "babel": {
     "presets": [
-      "@babel/react"
+      "@babel/preset-env",
+      "@babel/preset-react",
+      "@babel/preset-typescript"
     ]
   }
 }

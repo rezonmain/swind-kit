@@ -4,7 +4,7 @@ import React, { ReactNode } from "react";
 import { PolymorphicComponentProps } from "../../utils/polymorphic";
 
 interface TextProps {
-  children: ReactNode;
+  children?: ReactNode;
   tw?: string;
 }
 
@@ -64,7 +64,7 @@ const Text = <T extends React.ElementType = "span">({
       {...props}
       className={`${className} ${tw} ${props.className ?? ""}`.trim()}
     >
-      {props.children}
+      {props.children ?? ""}
     </Element>
   );
 };
